@@ -22,7 +22,8 @@ jobs:
 
   job-2:
     needs: job-1
-    uses: ./.github/workflows/reusable-workflow.yml # We do not need to check out the repository to use the reusable workflow
+    #uses: ./.github/workflows/reusable-workflow.yml # We do not need to check out the repository to use the reusable workflow
+    uses: rep02/.github/workflows/reusable-workflow.yml # We do not need to check out the repository to use the reusable workflow
     with:
       reusable_input: "job-2-input"
       filename: "input.txt"
