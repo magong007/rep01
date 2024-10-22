@@ -37,6 +37,7 @@ jobs:
           echo test, and deploy your project.
           echo checkout_dir=$GITHUB_WORKSPACE
           ls $GITHUB_WORKSPACE
+          echo "current workdir is: $(pwd)"
           cat f1
       - uses: actions/checkout@v4
       - id: foo
