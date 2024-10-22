@@ -44,7 +44,7 @@ jobs:
         #uses: rep02/action1@main
         with:
           who-to-greet: 'Mona the Octocat'
-      - run: echo random-number "$RANDOM_NUMBER"
+      - run: echo rep01/random-number "$RANDOM_NUMBER"
         shell: bash
         env:
           RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
