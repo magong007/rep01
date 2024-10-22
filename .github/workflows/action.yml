@@ -40,7 +40,8 @@ jobs:
           cat f1
       - uses: actions/checkout@v4
       - id: foo
-        uses: magong007/rep02@main
+        #uses: magong007/rep02@main
+        uses: magong007/rep02/action1@main
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number "$RANDOM_NUMBER"
