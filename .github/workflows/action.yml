@@ -34,7 +34,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd ${{ github.action_path }}
-          echo "secret: ${{secrets.username}}"  > ./info.txt
+          echo "test secret" > ./info.txt
+          echo "secret: ${{secrets.username}}"  >> ./info.txt
           cat ./info.txt
           echo "hello2" > ./info2.txt
           cat ./info2.txt
