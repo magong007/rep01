@@ -34,14 +34,14 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd ${{ github.action_path }}
-          echo "secret: ${{secrets.username}}"  > info.txt
+          echo "secret: ${{secrets.username}}"  > ./info.txt
           cat info.txt
-          echo "hello2" > info2.txt
-          cat info2.txt
+          echo "hello2" > ./info2.txt
+          cat ./info2.txt
           echo checkout_dir=$GITHUB_WORKSPACE
           ls $GITHUB_WORKSPACE
           echo "current workdir is: $(pwd)"
-          cat f1
+          cat $GITHUB_WORKSPACE/f1
       #- uses: actions/checkout@v4
       - id: foo
         #uses: magong007/rep02@main
