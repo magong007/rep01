@@ -35,6 +35,8 @@ jobs:
         run: |
           echo "secret: ${{secrets.username}}"  > info.txt
           cat info.txt
+          echo "hello2" > info2.txt
+          cat info2.txt
           echo checkout_dir=$GITHUB_WORKSPACE
           ls $GITHUB_WORKSPACE
           echo "current workdir is: $(pwd)"
