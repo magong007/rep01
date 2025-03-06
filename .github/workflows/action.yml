@@ -34,6 +34,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "github.ref_name is:${{github.ref_name}}:"
+          echo "GITHUB_REF is:${GITHUB_REF}:"
           cd ${{ github.action_path }}
           echo "test secret" > ./info.txt
           echo "secret: ${{secrets.username}}"  >> ./info.txt
